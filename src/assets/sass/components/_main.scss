@@ -1,0 +1,50 @@
+@use "../abstract/" as *;
+
+.newsletter{
+    @include card-width-mobile;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: repeat(5, min-content);
+    background-color: $clr-neutral-100;
+
+    &__thumb{
+        width: 100%;
+        object-fit: contain;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    &__title{
+        @include title-size-and-color;
+        margin-block: 2.4rem 0.5rem;
+        margin-inline: 6%;
+        
+    }
+
+    &__text{
+        margin-block-end: .5rem;
+        line-height: 1.5;
+        margin-inline: 6%;
+        color: $clr-neutral-400;
+    }
+
+    &__features{
+        list-style: none;
+        padding-inline-start: 0;
+        margin-inline: 6%;
+        color: $clr-neutral-400;
+        
+        & > li{
+            margin-block-end: .4rem;
+            padding-inline-start: 2.25rem;
+            line-height: 1.5;
+            position: relative;
+
+            &::before{
+                position: absolute;
+                left: 0;
+                top: 0.05em;
+                content: url("../images/icon-list.svg");           
+            }
+        }
+    }
+}

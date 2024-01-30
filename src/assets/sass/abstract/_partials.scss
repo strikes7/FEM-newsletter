@@ -1,0 +1,52 @@
+@use "colors" as *;
+@use "fonts" as *;
+@use "utilities" as *;
+
+
+@mixin card-width-mobile{
+    width: min(100%, toRem(500));
+}
+
+@mixin form-elemnt-position{
+    font-size: $fs-300;
+    font-weight: 700;
+    display: inline-block;
+}
+
+@mixin title-size-and-color{
+    font-size: $fs-700;
+    color: $clr-neutral-400;
+}
+
+@mixin button-style{
+    position: relative;
+    --bg-img-height: 0%;
+    width: 100%;
+    padding-block: toRem(22) 1rem;
+    text-align: center;
+    font-size: $fs-300;
+    font-weight: 700;
+    background-image: linear-gradient(90deg, $clr-gradient-1, $clr-gradient-2);
+    background-size:  100% var(--bg-img-height);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: $clr-neutral-400;
+    color: $clr-neutral-100;
+    border-width: 0;
+    border-radius: .5rem;
+    cursor: pointer;
+    overflow: visible;
+    box-shadow: 0 0.9rem 1.1rem 0.5rem transparent;
+    transition: 
+        background-size .1s ease-in-out,
+        box-shadow .25s ease-in-out,
+        transform .25s ease-in-out;
+
+    &:hover,
+    &:focus{
+        --bg-img-height: 100%;
+        box-shadow: 0 0.9rem 1.1rem 0.5rem $clr-gradient-2-semi;
+        transform: translateY(-.1rem);
+    }
+
+}

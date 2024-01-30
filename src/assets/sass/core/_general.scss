@@ -1,0 +1,14 @@
+@use "../abstract/" as *;
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  margin:0;
+  background-color: $clr-neutral-300;
+  font-family: $ff-primary;
+}
+
+input,button,label{
+  font-family: $ff-primary;
+}

@@ -1,0 +1,46 @@
+@use "../abstract/" as *;
+
+#subscribe-message{
+    @include card-width-mobile;
+    overflow: hidden;
+    position: absolute;
+    box-sizing: border-box;
+    min-height: 100dvh;
+    padding-block-start: toRem(220);
+    padding-inline: 6%;
+    background-color: $clr-neutral-100;
+    background-image: url("../images/icon-list.svg");
+    background-repeat: no-repeat;
+    background-position: 6% toRem(150);
+    background-size: toRem(64);
+    transform: translateY(-100%);
+    transition: transform .3s ease-in-out,
+    opacity .3s ease-in-out;
+
+    &[aria-hidden=true]{
+        opacity: 0;
+    }
+
+    &[aria-hidden=false]{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    &__close-button{
+        @include button-style;
+        margin-block: toRem(245) toRem(40);
+    }
+}
+
+.subscribe-message{
+    &__title{
+        @include title-size-and-color;
+        line-height: 1;
+        margin-block-end: 1.3rem;
+    }
+
+    &__text{
+        line-height: 1.4;
+        color: $clr-neutral-300;
+    }
+}

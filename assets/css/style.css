@@ -1,0 +1,188 @@
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+}
+
+input, button, label {
+  font-family: "Roboto", sans-serif;
+}
+
+.newsletter {
+  width: min(100%, 31.25rem);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: repeat(5, min-content);
+  background-color: hsl(0, 0%, 100%);
+}
+.newsletter__thumb {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 0 0 1rem 1rem;
+}
+.newsletter__title {
+  font-size: 2.375rem;
+  color: hsl(234, 29%, 20%);
+  margin-block: 2.4rem 0.5rem;
+  margin-inline: 6%;
+}
+.newsletter__text {
+  margin-block-end: 0.5rem;
+  line-height: 1.5;
+  margin-inline: 6%;
+  color: hsl(234, 29%, 20%);
+}
+.newsletter__features {
+  list-style: none;
+  padding-inline-start: 0;
+  margin-inline: 6%;
+  color: hsl(234, 29%, 20%);
+}
+.newsletter__features > li {
+  margin-block-end: 0.4rem;
+  padding-inline-start: 2.25rem;
+  line-height: 1.5;
+  position: relative;
+}
+.newsletter__features > li::before {
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  content: url("../images/icon-list.svg");
+}
+
+.sign-in {
+  margin-block-start: 0.9rem;
+  margin-inline: 6%;
+}
+.sign-in__label {
+  color: hsl(234, 29%, 20%);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+#sign-in__email-error-message {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  display: inline-block;
+  float: right;
+  margin-block: 0;
+  color: hsl(4, 100%, 67%);
+  transition: opacity 0.2s ease-in-out;
+}
+#sign-in__email-error-message[aria-hidden=true] {
+  opacity: 0;
+}
+#sign-in__email {
+  padding: 1rem 1.375rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin-block: 0.5rem 1.6rem;
+  line-height: 1;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  outline-color: hsl(235, 18%, 26%);
+  color: hsl(235, 18%, 26%);
+}
+#sign-in__email::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+#sign-in__email[aria-invalid=true] {
+  color: hsl(4, 100%, 67%);
+  background-color: hsla(4, 100%, 67%, 0.1);
+  border-color: hsl(4, 100%, 67%);
+  outline-color: hsl(4, 100%, 67%);
+}
+#sign-in__button {
+  position: relative;
+  --bg-img-height: 0%;
+  width: 100%;
+  padding-block: 1.375rem 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(14, 99%, 62%));
+  background-size: 100% var(--bg-img-height);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-width: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: visible;
+  box-shadow: 0 0.9rem 1.1rem 0.5rem transparent;
+  transition: background-size 0.1s ease-in-out, box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+#sign-in__button:hover, #sign-in__button:focus {
+  --bg-img-height: 100%;
+  box-shadow: 0 0.9rem 1.1rem 0.5rem hsla(14, 99%, 62%, 0.4);
+  transform: translateY(-0.1rem);
+}
+
+#subscribe-message {
+  width: min(100%, 31.25rem);
+  overflow: hidden;
+  position: absolute;
+  box-sizing: border-box;
+  min-height: 100dvh;
+  padding-block-start: 13.75rem;
+  padding-inline: 6%;
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("../images/icon-list.svg");
+  background-repeat: no-repeat;
+  background-position: 6% 9.375rem;
+  background-size: 4rem;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+#subscribe-message[aria-hidden=true] {
+  opacity: 0;
+}
+#subscribe-message[aria-hidden=false] {
+  opacity: 1;
+  transform: translateY(0%);
+}
+#subscribe-message__close-button {
+  position: relative;
+  --bg-img-height: 0%;
+  width: 100%;
+  padding-block: 1.375rem 1rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(14, 99%, 62%));
+  background-size: 100% var(--bg-img-height);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  border-width: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  overflow: visible;
+  box-shadow: 0 0.9rem 1.1rem 0.5rem transparent;
+  transition: background-size 0.1s ease-in-out, box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+  margin-block: 15.3125rem 2.5rem;
+}
+#subscribe-message__close-button:hover, #subscribe-message__close-button:focus {
+  --bg-img-height: 100%;
+  box-shadow: 0 0.9rem 1.1rem 0.5rem hsla(14, 99%, 62%, 0.4);
+  transform: translateY(-0.1rem);
+}
+
+.subscribe-message__title {
+  font-size: 2.375rem;
+  color: hsl(234, 29%, 20%);
+  line-height: 1;
+  margin-block-end: 1.3rem;
+}
+.subscribe-message__text {
+  line-height: 1.4;
+  color: hsl(235, 18%, 26%);
+}

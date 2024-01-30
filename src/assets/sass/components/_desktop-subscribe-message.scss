@@ -1,0 +1,12 @@
+@use "../abstract/" as *;
+
+#subscribe-message{
+    min-height: auto;
+    border-radius: 2rem;
+    padding: toRem(122) toRem(62) toRem(62) toRem(62) ;
+    background-position: toRem(62) toRem(47);
+
+    &__close-button{
+        margin-block: 1.2rem 0;
+    }
+}

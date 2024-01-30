@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/desktop-style.css" media="screen and (min-width: 50em)">
+</head>
+<body>
+  <main class="newsletter">
+    <picture class="newsletter__thumb__container">
+      <source srcset="assets/images/illustration-sign-up-desktop.svg" media="(min-width: 50em)"/>
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt=" " class="newsletter__thumb">
+    </picture>
+    <h1 class="newsletter__title">Stay updated!</h1>
+    <p class="newsletter__text">Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul class="newsletter__features">
+      <li>Product discovery and building what matters</li>
+      <li>Measuring to ensure updates are a success</li>
+      <li>And much more!</li>
+    </ul>
+    <form action="" class="sign-in">
+      <label for="sign-in__email" class="sign-in__label">Email address</label>
+      <p id="sign-in__email-error-message" aria-hidden="true">Valid email required</p>
+      <input type="email" name="email" id="sign-in__email" placeholder="email@company.com" aria-errormessage="sign-in__email-error-message">
+      <button type="submit"  id="sign-in__button">Subscribe to monthly newsletter</button>
+    </form>
+  </main>
+
+  <div id="subscribe-message" aria-hidden="true" >
+    <h2 class="subscribe-message__title">Thanks for subscribing!</h2>
+    <p class="subscribe-message__text" in>A confirmation email has been sent to <b id="user-email-address">ash@loremcompany.com</b>. Please open it and click the button inside to confirm your subscription.</p>
+    <button type="button" id="subscribe-message__close-button">Dismiss message</button>
+  </div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
